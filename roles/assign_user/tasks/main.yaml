@@ -1,0 +1,7 @@
+---
+- name: Assign user to project
+  os_user_role:
+    user: "{{ tenant_user }}"
+    role: "{{ user_role }}"
+    project: "{{ tenant_name }}"
+

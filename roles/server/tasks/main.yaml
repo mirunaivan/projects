@@ -1,0 +1,17 @@
+---
+- name: Create a VM
+  os_server:
+    state: "{{ state }}"
+    auth:
+      username: "{{ auth_username }}"
+      password: "{{ auth_password }}"
+      project_name: "{{ auth_project }}"
+    name: "{{ item }}"
+    image: "{{ image_id }}"
+    flavor: "{{ flavor }}"
+    network: "{{ vm_net_name }}"
+    security_groups: "{{ vm_security_group }}"
+    key_name: "{{ key_name }}"
+    auto_ip: yes
+    delete_fip: yes
+  with_sequence: start=1 end='{{ vm_number }}' format={{ vm_name }}%d

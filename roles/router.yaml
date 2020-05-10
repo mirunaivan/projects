@@ -1,0 +1,7 @@
+---
+- name: router
+  hosts: localhost
+  vars:
+    - state: "absent"
+  roles:
+    - router

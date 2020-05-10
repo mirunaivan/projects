@@ -1,0 +1,12 @@
+---
+- name: Create a router
+  os_router:
+    state: "{{ state }}"
+    auth:
+      username: "{{ auth_username }}"
+      password: "{{ auth_password }}"
+      project_name: "{{ auth_project }}"
+    name: "{{ router_name }}"
+    network: "public"
+    interfaces:
+      - "{{ sub_name }}"

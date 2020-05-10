@@ -1,0 +1,14 @@
+- name: Assigning Subnet
+  os_subnet:
+   state: "{{ state }}"
+   auth:
+     username: "{{ auth_username }}"
+     password: "{{ auth_password }}"
+     project_name: "{{ auth_project }}"
+
+   network_name: "{{ assigned_netname }}"
+   name: "{{ sub_name }}"
+   cidr: "{{ ip_range }}"
+   dns_nameservers:
+     - 193.181.14.10
+     - 8.8.8.8

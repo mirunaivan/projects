@@ -1,0 +1,9 @@
+---
+- name: Create user  
+  os_user:
+    state: "{{ state }}"
+    name: "{{ hostvars[inventory_hostname]['username' + item] }}"
+    email: "{{ hostvars[inventory_hostname]['emailadd' + item] }}"
+    password: "{{ hostvars[inventory_hostname]['password' + item] }}"
+    domain: default
+  with_sequence: start=1 end="{{ user_number }}"

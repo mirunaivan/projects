@@ -1,0 +1,12 @@
+- name: Create Network
+  os_network:
+    state: "{{ state }}"
+    auth:
+      username: "{{ auth_username }}"
+      password: "{{ auth_password }}"
+      project_name: "{{ auth_project }}"
+    name: "{{ net_name }}"
+    #external: "{{ ext }}"
+    project: "{{ project }}"    
+    provider_network_type: "{{ pnt }}"
+

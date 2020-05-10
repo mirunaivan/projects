@@ -1,0 +1,8 @@
+- name: Create Tenant
+  os_project:
+    endpoint_type: admin      
+    state: "{{ state }}"
+    name: "{{ tenant_name }}"
+    description: New-tenant
+    domain_id: default
+    enabled: True 

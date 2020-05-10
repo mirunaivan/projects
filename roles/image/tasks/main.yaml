@@ -1,0 +1,10 @@
+- name: Creating a cirros image
+  os_image:
+    state: "{{ state }}" 
+    auth:
+      username: "{{ auth_username }}"
+      password: "{{ auth_password }}"
+      project_name: "{{ auth_project }}"
+    name: "{{ img_name }}"
+    filename: "{{ file_path }}"
+

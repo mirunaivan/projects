@@ -1,0 +1,17 @@
+---
+- name: playbook
+  hosts: localhost
+  roles:         
+    - tenant
+    - user
+    - assign_user
+    - network
+    - subnet
+    - router
+    - server_group
+    - security_group
+    - http_rule
+    - https_rule
+    - ssh_rule
+    - keypair
+    - server

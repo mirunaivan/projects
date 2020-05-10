@@ -1,0 +1,18 @@
+---
+- name: Deleting all items created previously
+  vars:
+    state: "absent"
+  hosts: localhost
+  roles:
+    - server
+    - ssh_rule
+    - http_rule
+    - https_rule
+    - security_group
+    - server_group
+    - image
+    - router
+    - subnet
+    - network
+    - user
+    - tenant

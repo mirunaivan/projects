@@ -1,0 +1,11 @@
+---
+- name: Creating a server group
+  os_server_group:
+    state: "{{ state }}"
+    auth:
+      username: "{{ auth_username }}"
+      password: "{{ auth_password }}"
+      project_name: "{{ auth_project }}"
+    name: "{{ server_group }}"
+    policies: 
+      - affinity
