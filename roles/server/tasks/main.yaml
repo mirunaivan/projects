@@ -10,7 +10,6 @@
     image: "{{ image_id }}"
     flavor: "{{ flavor }}"
     network: "{{ vm_net_name }}"
-    security_groups: "{{ vm_security_group }}"
     key_name: "{{ key_name }}"
     auto_ip: yes
     delete_fip: yes
