@@ -30,20 +30,12 @@ file_path: "/opt/stack/cirros-0.3.5-x86_64-disk.img"
 # server group
 server_group: "serverGroupTwo"
 
-# sec group
-sec_group_name: "securityGroupTwo"
-
-# http, https, ssh
-http_sec_group: "securityGroupTwo"
-https_sec_group: "securityGroupTwo"
-ssh_sec_group: "securityGroupTwo"
-
 # ssh key
 key_name: "mykey"
 key_file: "/opt/stack/.ssh/id_rsa.pub"
 
 # vm
-vm_number: "1"
+vm_number: "2"
 vm_name: "vmTwo"
 image_id: "cirros-0.4.0-x86_64-disk"
 flavor: "m1.tiny"
